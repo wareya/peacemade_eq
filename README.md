@@ -15,3 +15,7 @@ Works on power-only USB too, but can't be reconfigured in this state. Configurat
 ## License
 
 Apache 2.0
+
+## TODO
+
+Everything works, but latency is higher than it needs to be (128 samples instead of arbitrarily low). This is because of bugs in the Teensy Audio Library. It would be nice to get rid of Teensy Audio Library and talk to the DAC/ADC directly over I2S or SPI or whatever it uses.
