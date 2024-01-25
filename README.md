@@ -32,6 +32,8 @@ When first opening it, set Controller 63 to 1 to get an update of what the curre
 31 : output level (0 to 127)
 ```
 
+Only Channel 1 is used.
+
 ## License
 
 Code is licensed under the Apache 2.0 license. 3D models are licensed under the CC0 license: [https://creativecommons.org/licenses/zero](https://creativecommons.org/publicdomain/zero/1.0/legalcode)
