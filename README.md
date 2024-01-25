@@ -12,6 +12,26 @@ Running at more than 24 MHz may result in audible interference noise. Also, be s
 
 Works on power-only USB too, but can't be reconfigured in this state. Configuration will be remembered from the last time it was plugged into a PC.
 
+## Configuration
+
+The filters are configured over USB MIDI. Yes, really. You can use something like MIDI Tools (https://mountainutilities.eu/miditools) to change the filterse in realtime as the EQ is running.
+
+When first opening it, set Controller 63 to 1 to get an update of what the current value is on all controllers. The meaning of each controller is as follows:
+
+```
+0, 3, 6, 9 : filter frequency, coarse adjustment (10 hz to 24 khz, logarithmic)
+1, 4, 7, 10 : filter gain, coarse adjustment (-18.0 to +18.0db, linear in db, logarithmic in amplitude)
+2, 5, 8, 11 : filter resonance, coarse adjustment (0.333.... to 33.333..., logarithmic)
+
+32, 35, etc : fine versions of the above coarse adjustments
+
+63 : set to 1 to get an update from the device on what the current value of each controller is
+64 ~ 67 : filter type (0 = null, 1 = low pass, 2 = high pass, 3 = low shelf, 4 = high shelf, 5 = band pass, 5 = notch, 7 = peak)
+94 : 0 = analog output, 1 = digital output only
+95 : input level (0 to 15)
+31 : output level (0 to 127)
+```
+
 ## License
 
 Apache 2.0
@@ -19,6 +39,8 @@ Apache 2.0
 ## TODO
 
 Everything works, but latency is higher than it needs to be (128 samples instead of arbitrarily low). This is because of bugs in the Teensy Audio Library. It would be nice to get rid of Teensy Audio Library and talk to the DAC/ADC directly over I2S or SPI or whatever it uses.
+
+It would also be nice to support arbitrarily many filters (at least up to 7, as the current control layout supports).
 
 ## Case (3d model)
 
