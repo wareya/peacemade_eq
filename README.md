@@ -47,3 +47,7 @@ It would also be nice to support arbitrarily many filters (at least up to 7, as 
 ![IMG_20240124_055720](https://github.com/wareya/peacemade_eq/assets/585488/960d4a68-fc35-4628-afe4-f003e2c72f6e)
 
 ![IMG_20240125_010053](https://github.com/wareya/peacemade_eq/assets/585488/04d9a487-6b3c-49de-8565-791492847fe2)
+
+## Approximate cost
+
+The Teensy 4.1 costs about 30 dollars. The Audio Shield costs about 15 dollars. Add in extra money for soldering work, 3d printing, and buying or scavanging a line-in plug, and this project costs more than 45 dollars to build.
