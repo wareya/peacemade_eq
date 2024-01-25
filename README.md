@@ -34,7 +34,7 @@ When first opening it, set Controller 63 to 1 to get an update of what the curre
 
 ## License
 
-Apache 2.0
+Code is licensed under the Apache 2.0 license. 3D models are licensed under the CC0 license: https://creativecommons.org/licenses/zero
 
 ## TODO
 
